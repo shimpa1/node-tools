@@ -1,13 +1,12 @@
 #!/bin/bash
 
-echo "reading node IP addresses from server_list.txt"
-
 # Configuration
 BACKUP_DIR="$(pwd)/backups"  # Using current directory
 TIMESTAMP=$(date +%Y%m%d_%H%M%S)
 FILES_TO_BACKUP=(
     "/root/.akash/config/config.toml"
     "/root/.akash/config/app.toml"
+    "/root/.akash/config/priv_validator_key.json"
     "/root/.akash/data/priv_validator_state.json"
     "/root/block_height_compare.sh"
     "/etc/environment"
